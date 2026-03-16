@@ -27,11 +27,12 @@ export default function ChurchHome() {
       {/* HERO SECTION WITH INNOVATIVE LAYOUT */}
       <header className="relative flex h-[90vh] items-center justify-center overflow-hidden bg-slate-900 pt-16">
         <div className="absolute inset-0 opacity-40">
-           {/* In production, replace with a high-res video of Kathelwa landscape */}
-          <img 
-            src="/api/placeholder/1920/1080" 
-            alt="Church Interior" 
-            className="h-full w-full object-cover"
+          {/* New Real Image Code */}
+<img 
+  src="/sanctuary.jpg" 
+  alt="St. Marys Kathelwa Sanctuary" 
+  className="h-full w-full object-cover"
+/>
           />
         </div>
         <div className="relative z-10 text-center px-4">
@@ -43,8 +44,8 @@ export default function ChurchHome() {
             <span className="text-blue-400">Serving Community.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-            Experience spiritual growth and fellowship at St. Mary’s AIPCA Kathelwa. 
-            Join us every Sunday as we celebrate our faith in the heart of Meru.
+           Founded in 1950, St. Mary's AIPCA Kathelwa has been a beacon of hope in Meru County. 
+           Join us as we continue to grow in faith, community, and service.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <button className="flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-900 hover:bg-slate-100 transition">
