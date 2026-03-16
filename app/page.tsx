@@ -26,15 +26,14 @@ export default function ChurchHome() {
 
       {/* HERO SECTION WITH INNOVATIVE LAYOUT */}
       <header className="relative flex h-[90vh] items-center justify-center overflow-hidden bg-slate-900 pt-16">
-        <div className="absolute inset-0 opacity-40">
-          {/* New Real Image Code */}
-<img 
-  src="/sanctuary.jpg" 
-  alt="St. Marys Kathelwa Sanctuary" 
-  className="h-full w-full object-cover"
-/>
-          />
-        </div>
+<div className="absolute inset-0 opacity-40">
+  {/* New Real Image Code */}
+  <img 
+    src="/sanctuary.jpg" 
+    alt="St. Marys Kathelwa Sanctuary" 
+    className="h-full w-full object-cover"
+  />
+</div>
         <div className="relative z-10 text-center px-4">
           <span className="mb-4 inline-block rounded-full bg-blue-500/20 px-4 py-1 text-sm font-semibold text-blue-300 backdrop-blur-sm">
             Welcome to Kathelwa, Meru
