@@ -1,112 +1,51 @@
-import React from 'react';
-import { Church, MapPin, Clock, Heart, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { PlayCircle, ArrowRight } from 'lucide-react';
 
-// Modern 2026 Server Component
-export default function ChurchHome() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       
-      {/* GLASSMORPHIC NAVIGATION */}
-      <nav className="fixed top-0 z-50 w-full border-b border-white/20 bg-white/70 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
-          <div className="flex items-center gap-2">
-            <Church className="text-blue-700" size={32} />
-            <span className="text-xl font-bold tracking-tight">ST. MARY'S AIPCA</span>
-          </div>
-          <div className="hidden md:flex gap-8 font-medium">
-            <a href="#about" className="hover:text-blue-700 transition">Our History</a>
-            <a href="#services" className="hover:text-blue-700 transition">Services</a>
-            <a href="#giving" className="hover:text-blue-700 transition">Tithes</a>
-          </div>
-          <button className="rounded-full bg-blue-700 px-6 py-2 text-white font-semibold hover:bg-blue-800 transition shadow-lg">
-            Join Live
-          </button>
-        </div>
-      </nav>
-
-      {/* HERO SECTION WITH INNOVATIVE LAYOUT */}
-      <header className="relative flex h-[90vh] items-center justify-center overflow-hidden bg-slate-900 pt-16">
-<div className="absolute inset-0 opacity-40">
-  {/* New Real Image Code */}
-  <img 
-    src="/sanctuary.jpg" 
-    alt="St. Marys Kathelwa Sanctuary" 
-    className="h-full w-full object-cover"
-  />
-</div>
-        <div className="relative z-10 text-center px-4">
-          <span className="mb-4 inline-block rounded-full bg-blue-500/20 px-4 py-1 text-sm font-semibold text-blue-300 backdrop-blur-sm">
-            Welcome to Kathelwa, Meru
+      {/* HERO SECTION - Duplicate menus have been removed! */}
+      <header className="relative bg-[#1a2233] text-white pt-40 pb-56 px-4 text-center flex flex-col items-center justify-center overflow-hidden">
+        
+        {/* Subtle radial gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#1a2233]"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs mb-6 block">
+            Welcome to Kathelwa
           </span>
-          <h1 className="max-w-4xl text-5xl font-extrabold tracking-tight text-white md:text-7xl">
-            Worshipping God, <br />
-            <span className="text-blue-400">Serving Community.</span>
+          
+          <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-tight italic text-white">
+            Seek Ye First.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-           Founded in 1950, St. Mary's AIPCA Kathelwa has been a beacon of hope in Meru County. 
-           Join us as we continue to grow in faith, community, and service.
+          
+          <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+            Join St. Mary's AIPCA for uplifting worship, a loving community, and a deeper connection with Christ in Meru County.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button className="flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-900 hover:bg-slate-100 transition">
-              Plan Your Visit <ArrowRight size={20} />
-            </button>
-            <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md hover:bg-white/20">
-              Submit Prayer Request
-            </button>
+          
+          {/* Reduced Button Overload */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link 
+              href="/about" 
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-xl shadow-orange-500/30 text-sm uppercase tracking-widest flex items-center gap-2"
+            >
+              Plan Your Visit <ArrowRight size={16}/>
+            </Link>
+            
+            <Link 
+              href="/gallery" 
+              className="bg-white/10 hover:bg-white text-white hover:text-slate-950 font-bold py-5 px-10 rounded-full transition-all duration-300 backdrop-blur-md flex items-center justify-center gap-2 border border-white/20 text-sm uppercase tracking-widest"
+            >
+              <PlayCircle size={20} /> Watch Live
+            </Link>
           </div>
         </div>
       </header>
 
-      {/* SERVICE TIMES - BENTO GRID TREND */}
-      <section id="services" className="py-24 px-4">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold">Weekly Services</h2>
-            <p className="text-slate-600 mt-2">Join us at our sanctuary in Kathelwa</p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Sunday Service */}
-            <div className="group rounded-3xl border border-slate-200 bg-white p-8 hover:shadow-2xl transition duration-500">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-blue-700">
-                <Clock size={24} />
-              </div>
-              <h3 className="text-2xl font-bold">Sunday Worship</h3>
-              <p className="mt-4 text-slate-600 italic">"Main Service & Liturgy"</p>
-              <p className="mt-2 font-semibold text-blue-700">09:00 AM — 12:30 PM</p>
-            </div>
-
-            {/* Youth Meeting */}
-            <div className="group rounded-3xl border border-slate-200 bg-white p-8 hover:shadow-2xl transition duration-500">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-100 text-purple-700">
-                <Heart size={24} />
-              </div>
-              <h3 className="text-2xl font-bold">Youth Fellowship</h3>
-              <p className="mt-4 text-slate-600">Empowering the next generation of AIPCA leaders.</p>
-              <p className="mt-2 font-semibold text-purple-700">Saturdays 2:00 PM</p>
-            </div>
-
-            {/* Location Card */}
-            <div className="group rounded-3xl bg-slate-900 p-8 text-white">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
-                <MapPin size={24} />
-              </div>
-              <h3 className="text-2xl font-bold">Find Us</h3>
-              <p className="mt-4 text-slate-400">Kathelwa Market Road, <br />Meru County, Kenya.</p>
-              <button className="mt-6 font-bold text-blue-400 underline decoration-2 underline-offset-4">
-                Open in Google Maps
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-slate-200 bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <p className="text-slate-500">© 2026 St. Mary’s AIPCA Church, Kathelwa. All Rights Reserved.</p>
-        </div>
-      </footer>
+      {/* PASTE YOUR SERMONS SECTION BELOW THIS LINE */}
+      {/* <section className="py-20 px-4 bg-white rounded-t-[3rem] -mt-10 relative z-10"> ... </section> */}
+      
     </div>
   );
 }
