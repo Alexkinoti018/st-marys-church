@@ -10,10 +10,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Ministries', href: '/ministries' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Prayer Wall', href: '/prayer-wall' },
-    { name: 'Contact', href: '/contact' },
+    
   ];
 
   return (

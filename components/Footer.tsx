@@ -18,9 +18,9 @@ export default function Footer() {
             Worshipping God and serving the community in Meru County. Join us as we seek Him first and grow together in faith and love.
           </p>
           <div className="flex items-center gap-4 pt-2">
-            <Link href="#" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Facebook size={18} /></Link>
-            <Link href="#" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Instagram size={18} /></Link>
-            <Link href="#" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Youtube size={18} /></Link>
+            <Link href="https://web.facebook.com/StMarysAipcaChurchKathelwa" target="_blank" rel="noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Facebook size={18} /></Link>
+            <Link href="https://www.instagram.com/stmarysaipcakathelwa" target="_blank" rel="noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Instagram size={18} /></Link>
+            <Link href="https://www.youtube.com/@StMarysAipcaChurchKathelwa" target="_blank" rel="noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-orange-500 hover:text-white transition-all"><Youtube size={18} /></Link>
           </div>
         </div>
 
