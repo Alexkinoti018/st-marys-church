@@ -157,7 +157,7 @@ export default function PrayerWallPage() {
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20 text-slate-400">
               <Loader2 size={40} className="animate-spin mb-4 text-blue-300" />
-              <p>Loading the prayer wall...</p>
+              <p>Intercession in progress...</p>
             </div>
           ) : prayers.length === 0 ? (
             <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-12 text-center">

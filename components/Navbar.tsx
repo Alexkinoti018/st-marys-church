@@ -1,7 +1,6 @@
 "use client";
 
 import Link from 'next/link';
-// Fixed: Added ArrowRight to the imports!
 import { Church, Menu, X, Facebook, Instagram, Twitter, Youtube, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
@@ -14,7 +13,6 @@ export default function Navbar() {
     { name: 'Ministries', href: '/ministries' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Prayer Wall', href: '/prayer-wall' },
-    
   ];
 
   return (
@@ -31,7 +29,7 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex items-center gap-5 text-slate-300 font-medium tracking-wide">
             <span className="flex items-center gap-1.5"><MapPin size={12} className="text-orange-500" /> Kathelwa, Meru County</span>
-            <span className="flex items-center gap-1.5"><Phone size={12} className="text-orange-500" /> 0111 012200</span>
+            <span className="flex items-center gap-1.5"><Phone size={12} className="text-orange-500" /> +254724236350</span>
           </div>
         </div>
         
@@ -49,7 +47,8 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 font-black text-slate-900 tracking-tighter text-xl">
               <Church className="text-orange-500" size={28} />
-              ST. MARY'S AIPCA
+              {/* ESCAPED APOSTROPHE FIX */}
+              ST. MARY&apos;S AIPCA
             </Link>
 
             {/* Desktop Menu */}

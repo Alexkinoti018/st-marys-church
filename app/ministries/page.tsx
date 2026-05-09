@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function MinistriesPage() {
   const ministries = [
     {
-      title: "Women's Guild",
+      title: "Mother Council",
       description: "A pillar of strength in the church, dedicated to prayer, community service, and mentoring younger women in faith and life.",
       icon: <HeartHandshake size={32} />,
       color: "text-pink-600",
@@ -15,7 +15,7 @@ export default function MinistriesPage() {
       border: "group-hover:border-pink-200"
     },
     {
-      title: "Men's Association",
+      title: "Church Elders",
       description: "Empowering men to be godly leaders in their homes and community through fellowship, mentorship, and economic empowerment.",
       icon: <Users size={32} />,
       color: "text-blue-600",
@@ -58,7 +58,7 @@ export default function MinistriesPage() {
           <Users className="mx-auto mb-6 text-orange-500" size={48} />
           <h1 className="text-5xl md:text-7xl font-black italic mb-6 tracking-tight">Our Ministries.</h1>
           <p className="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
-            There is a place for everyone at St. Mary's. Find your community, discover your purpose, and serve alongside fellow believers.
+            There is a place for everyone at St. Mary's Church. Find your community, discover your purpose, and serve alongside fellow believers.
           </p>
         </div>
       </header>

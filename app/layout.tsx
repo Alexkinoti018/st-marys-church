@@ -34,10 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} ...`}
+    suppressHydrationWarning
+  >
         <Navbar />
         <main>{children}</main>
         <Footer />

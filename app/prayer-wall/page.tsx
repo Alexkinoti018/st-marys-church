@@ -20,33 +20,6 @@ export default function PrayerWallPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [newPrayer, setNewPrayer] = useState({ name: '', request: '' });
 
-  // 1. Fetch real prayers when the page loads
-  useEffect(() => {
-    fetchPrayers();
-  }, []);
-
-  const fetchPrayers = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('prayer_requests')
-        .select('*')
-        .order('created_at', { ascending: false });
-
-      if (error) throw error;
-
-      if (data) {
-        const formattedData = data.map((prayer) => ({
-          ...prayer,
-          hasPrayed: false
-        }));
-        setPrayers(formattedData);
-      }
-    } catch (error) {
-      console.error('Error fetching prayers:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
@@ -54,7 +27,7 @@ export default function PrayerWallPage() {
   };
 
   // 2. Send the real prayer to the database
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newPrayer.request.trim()) return;
     
@@ -156,6 +129,7 @@ export default function PrayerWallPage() {
               />
 
               <button 
+                type="submit"
                 disabled={isSubmitting || !newPrayer.request.trim()}
                 className="w-full bg-slate-900 text-white font-black py-4 rounded-2xl hover:bg-orange-500 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg uppercase tracking-widest text-sm"
               >
@@ -170,7 +144,7 @@ export default function PrayerWallPage() {
           {isLoading && (
             <div className="flex flex-col items-center justify-center py-20 text-slate-400">
                <Loader2 className="animate-spin mb-4 text-orange-500" size={40} />
-               <p className="font-bold tracking-widest uppercase text-sm">Loading Prayers...</p>
+               <p className="font-bold tracking-widest uppercase text-sm">Loading Prayers.Intercession Hour ..</p>
             </div>
           )}
 
@@ -198,6 +172,7 @@ export default function PrayerWallPage() {
                 </span>
                 
                 <button 
+                  type="button"
                   onClick={() => handlePrayClick(prayer.id)}
                   className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 ${
                     prayer.hasPrayed 

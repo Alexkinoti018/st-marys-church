@@ -71,7 +71,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Latest Sermons</h2>
               <p className="text-slate-500 text-lg">Catch up on recent messages from our sanctuary.</p>
             </div>
-            <a href="https://youtube.com" target="_blank" rel="noopener" className="flex items-center gap-2 text-red-600 font-bold hover:text-red-700 transition bg-red-50 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-red-600 font-bold hover:text-red-700 transition bg-red-50 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
               <Youtube size={20} /> Subscribe
             </a>
           </div>
